@@ -1,0 +1,23 @@
+
+
+{% block content %} 
+<html>
+<head></head>
+<body>
+	<center>
+	<h1> <b>LOGIN</b></h1>
+	<h3><p> Please Fill Form To Login</p></h3>
+	<form method="post">  
+		{% csrf_token %}
+		{{ form.as_p }}	
+		
+		<button type="submit">Login</button>
+		<br/><br/>
+		<button><a href="{% url 'register' %}">Register</a></button>
+	</form>
+	</center>
+	
+	
+</body>
+</html>
+{% endblock %}
